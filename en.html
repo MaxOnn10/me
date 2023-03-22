@@ -2,23 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website of Maxim Melenevsky">
-    <meta name="keywords" content="portfolio, layout, creating sites, front-end">
-    <title>Max Melenevskiy</title>
-     <!--Favicon-->
-     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
-     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-     <link rel="manifest" href="images/favicons/site.webmanifest">
-     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-     <meta name="msapplication-TileColor" content="#603cba">
-     <meta name="theme-color" content="#ffffff">
-    
-    <link rel="stylesheet" href="css/style.min.css">
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBD6CXT21"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -27,6 +10,26 @@
 
         gtag('config', 'G-7FBD6CXT21');
     </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website of Maxim Melenevsky">
+    <meta name="keywords" content="portfolio, layout, creating sites, front-end">
+    <title>Max Melenevskiy</title>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/header.jpg" as="image">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="light">
@@ -81,7 +84,8 @@
                     About me
                 </h2>
                 <p class="about__content">
-                    Hi, I&rsquo;m Maxim&nbsp;&mdash; a&nbsp;layout designer from Kyiv. <br>I&rsquo;m interested in&nbsp;the layout and front-end part and everything connected with&nbsp;it.
+                    Hi, I&rsquo;m Maxim&nbsp;&mdash; a&nbsp;layout designer from Kyiv. <br>I&rsquo;m interested
+                    in&nbsp;the layout and front-end part and everything connected with&nbsp;it.
                 </p>
 
                 <p class="about__content">
@@ -202,8 +206,8 @@
                 </h2>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank"><img class="portfolio__img"
-                            src="images/yarltnphoto.jpg" alt="">
+                    <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank">
+                        <img class="portfolio__img" src="images/yarltnphoto.jpg" loading="lazy" alt="yarltnphoto">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Made with:</span> <br>
@@ -216,12 +220,31 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Photographer landing page</a>
+                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Photographer
+                        landing page</a>
                 </p>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank"><img class="portfolio__img" src="images/trafico.jpg"
-                            alt=""></a>
+                    <a class="portfolio__img-link" href="https://norway-final.vercel.app/" target="_blank">
+                        <img class="portfolio__img" src="images/Norway.jpg" loading="lazy" alt="norway">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-title">Made with:</span> <br>
+                        <span class="portfolio__info-item">HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; Jquery</span>
+                        <span class="portfolio__info-item">&mdash; Slick-carousel</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Simplebar</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Landing page of travel agency "Norway"</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank">
+                        <img class="portfolio__img" src="images/trafico.jpg" loading="lazy" alt="trafico"></a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Made with:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
@@ -232,12 +255,14 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Trafico/" target="_blank">Landing of&nbsp;the transport company &laquo;Trafico&raquo;</a>
+                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Trafico/" target="_blank">Landing
+                        of&nbsp;the transport company &laquo;Trafico&raquo;</a>
                 </p>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank"><img class="portfolio__img" src="images/makxoot.jpg"
-                            alt=""></a>
+                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">
+                        <img
+                            class="portfolio__img" src="images/makxoot.jpg" loading="lazy" alt="makxoot"></a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Made with:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
@@ -247,7 +272,8 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">Landing of&nbsp;the Internet provider &laquo;Makxoot&raquo;</a>
+                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">Landing
+                        of&nbsp;the Internet provider &laquo;Makxoot&raquo;</a>
                 </p>
             </div>
 
@@ -289,7 +315,7 @@
         </section>
     </main>
 
-    <script src="js/main.min.js"></script>
+    <script defer src="js/main.min.js"></script>
 </body>
 
 </html>

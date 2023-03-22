@@ -2,11 +2,18 @@
 <html lang="uk">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBD6CXT21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7FBD6CXT21');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сайт-портфоліо"><!-- Описание страницы при выдаче в гугл поиске -->
+    <meta name="description" content="Сайт-портфоліо">
     <meta name="keywords" content="Портфоліо, верстка, створення сайтів, фронт-енд">
-    <!-- Ключевые слова которые относятся к странице -->
     <title>Макс Меленевський</title>
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
@@ -17,17 +24,12 @@
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
     
+    <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/header.jpg" as="image">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
     <link rel="stylesheet" href="css/style.min.css">
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBD6CXT21"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-7FBD6CXT21');
-    </script>
 </head>
 
 <body class="light">
@@ -205,8 +207,8 @@
                 </h2>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank"><img class="portfolio__img"
-                            src="images/yarltnphoto.jpg" alt="">
+                    <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank">
+                        <img class="portfolio__img" src="images/yarltnphoto.jpg" loading="lazy" alt="yarltnphoto">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
@@ -221,10 +223,29 @@
                 <p class="portfolio__name">
                     <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Лендінг фотографа</a>
                 </p>
+                
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://norway-final.vercel.app/" target="_blank">
+                        <img class="portfolio__img" src="images/Norway.jpg" loading="lazy" alt="Go">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
+                        <span class="portfolio__info-item">HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; Jquery</span>
+                        <span class="portfolio__info-item">&mdash; Slick-carousel</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Simplebar</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Лендінг туристичного агентства "Norway"</a>
+                </p>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank"><img class="portfolio__img" src="images/trafico.jpg"
-                            alt=""></a>
+                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank">
+                        <img class="portfolio__img" src="images/trafico.jpg" loading="lazy" alt="trafico">
+                    </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
@@ -239,8 +260,9 @@
                 </p>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank"><img class="portfolio__img" src="images/makxoot.jpg"
-                            alt=""></a>
+                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">
+                        <img class="portfolio__img" src="images/makxoot.jpg" loading="lazy" alt="makxoot">
+                    </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
@@ -291,7 +313,7 @@
             </div>
         </section>
     </main>
-    <script src="js/main.min.js"></script>
+    <script defer src="js/main.min.js"></script>
 </body>
 
 </html>
