@@ -23,13 +23,32 @@
     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
-    
+
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="images/header.jpg" as="image">
+    <link rel="preload" href="images/header.webp" as="image">
     <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="preload" href="js/main.min.js" as="script">
+    <link rel="preload" href="js/libs.min.js" as="script">
+    <link rel="preload" href="js/main.js" as="script">
     <link rel="stylesheet" href="css/style.min.css">
+
+    <style>
+        body.dark .home__theme-dark {
+            display: none !important;
+        }
+
+        body.dark .home__theme-light {
+            display: block !important;
+        }
+
+        body.light .home__theme-light {
+            display: none !important;
+        }
+
+        body.light .home__theme-dark {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body class="dark">
@@ -58,8 +77,8 @@
                         Меленевський
                     </h1>
                     <p class="home__info">
-                        Верстальщик/Front-end розробник <br>
-                        22 роки, Київ
+                        Front-end/Wordpress розробник <br>
+                        24 роки, Київ
                     </p>
                     <div class="home__theme">
                         <button id="light" class="home__theme-light">
@@ -74,7 +93,7 @@
                             href="en.html">EN</a>
                     </div>
                 </div>
-                <img class="home__img" src="images/header.jpg" alt="">
+                <img class="home__img" src="images/header.webp" alt="">
             </div>
         </section>
 
@@ -89,7 +108,8 @@
                     частина, і&nbsp;все що&nbsp;з&nbsp;цим пов&rsquo;язано.
                 </p>
                 <p class="about__content">
-                    Закінчив академію за&nbsp;спеціальністю &laquo;Інженерія програмного забезпечення&nbsp;&mdash; Web-розробка&raquo;.
+                    Закінчив академію за&nbsp;спеціальністю &laquo;Інженерія програмного забезпечення&nbsp;&mdash;
+                    Web-розробка&raquo;.
                 </p>
                 <p class="about__content">
                     Готовий до&nbsp;реалізації ваших майбутніх проектів.
@@ -155,11 +175,6 @@
                         </div>
 
                         <div class="skills__box">
-                            <p class="skills__name">LESS</p>
-                            <img class="skills__img less-img" src="images/less.svg" alt="">
-                        </div>
-
-                        <div class="skills__box">
                             <p class="skills__name">JS/Jquery</p>
                             <img class="skills__img js-img" src="images/js.svg" alt="">
                         </div>
@@ -188,11 +203,6 @@
                             <p class="skills__name">GSAP</p>
                             <img class="skills__img anime-img" src="images/gsap.svg" alt="">
                         </div>
-
-                        <div class="skills__box">
-                            <p class="skills__name">C# (WinForms/WPF)</p>
-                            <img class="skills__img csharp-img" src="images/c-sharp.svg" alt="">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -205,11 +215,27 @@
                 </h2>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://koliadacosmetolog.com/" target="_blank">
-                        <img class="portfolio__img" src="images/beautifulstudio.webp" loading="lazy" alt="koliada cosmetolog">
+                    <a class="portfolio__img-link" href="https://m-production.ca/" target="_blank">
+                        <img class="portfolio__img" src="images/m-prod.webp" loading="lazy" alt="m-production">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
+                        <span class="portfolio__info-item">Wordpress</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Bootstrap4</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://m-production.ca/" target="_blank">Сайт типографії "M-Production"</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://koliadacosmetolog.com/" target="_blank">
+                        <img class="portfolio__img" src="images/beautifulstudio.webp" loading="lazy"
+                            alt="koliada cosmetolog">
+                    </a>
+                    <p class="portfolio__img-info">
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; JS</span>
@@ -217,7 +243,25 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://koliadacosmetolog.com/" target="_blank">Лендінг косметологічного салону</a>
+                    <a class="portfolio__name-link" href="https://koliadacosmetolog.com/" target="_blank">Лендінг
+                        косметологічного салону</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://mayrawedding.com/" target="_blank">
+                        <img class="portfolio__img" src="images/mayra.webp" loading="lazy" alt="mayrawedding">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-item">Wordpress (ACF)</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Isotope.js</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://mayrawedding.com/" target="_blank">Сайт весільних суконь "Mayra Wedding"</a>
                 </p>
 
                 <div class="portfolio__img-box">
@@ -225,7 +269,6 @@
                         <img class="portfolio__img" src="images/yarltnphoto.webp" loading="lazy" alt="yarltnphoto">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; Jquery</span>
@@ -235,15 +278,32 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Лендінг фотографа</a>
+                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Лендінг
+                        фотографа</a>
                 </p>
-                
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://annakyrytsia-photography.com/" target="_blank">
+                        <img class="portfolio__img" src="images/anna.webp" loading="lazy" alt="annakyrytsia-photography">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-item">Wordpress</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Isotope.js</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://annakyrytsia-photography.com/" target="_blank">Сайт фотографа</a>
+                </p>
+
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://norway-final.vercel.app/" target="_blank">
                         <img class="portfolio__img" src="images/Norway.webp" loading="lazy" alt="Norway">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; Jquery</span>
@@ -253,40 +313,8 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Лендінг туристичного агентства "Norway"</a>
-                </p>
-
-                <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank">
-                        <img class="portfolio__img" src="images/trafico.webp" loading="lazy" alt="trafico">
-                    </a>
-                    <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
-                        <span class="portfolio__info-item">HTML5</span>
-                        <span class="portfolio__info-item">&mdash; SCSS</span>
-                        <span class="portfolio__info-item">&mdash; JS/Jquery</span>
-                        <span class="portfolio__info-item">&mdash; Bootstrap4</span>
-                        <!-- <span class="portfolio__info-item">&mdash; Swiper.js</span> -->
-                    </p>
-                </div>
-                <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Trafico/" target="_blank">Лендінг транспортної компанії "Trafico"</a>
-                </p>
-
-                <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">
-                        <img class="portfolio__img" src="images/makxoot.webp" loading="lazy" alt="makxoot">
-                    </a>
-                    <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Зроблено за допомогою:</span> <br>
-                        <span class="portfolio__info-item">HTML5</span>
-                        <span class="portfolio__info-item">&mdash; SCSS</span>
-                        <span class="portfolio__info-item">&mdash; Jquery</span>
-                        <span class="portfolio__info-item">&mdash; Slick-carousel</span>
-                    </p>
-                </div>
-                <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">Лендінг інтернет провайдера "Makxoot"</a>
+                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Лендінг
+                        туристичного агентства "Norway"</a>
                 </p>
             </div>
 
@@ -318,7 +346,8 @@
             </div>
         </section>
     </main>
-    <script defer src="js/main.min.js"></script>
+    <script defer src="js/libs.min.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,48 +1,34 @@
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
-// const uk_lang = document.getElementById("uk");
-// const en_lang = document.getElementById("en");
 const body = document.body;
 
-const theme = localStorage.getItem("theme");
-if (theme) {
-    body.classList.add(theme);
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const savedTheme = localStorage.getItem("theme");
+
+const currentTheme = savedTheme || (prefersDarkScheme.matches ? "dark" : "light");
+
+function applyTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        body.classList.remove("light");
+    } else {
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
 }
-if (theme == "dark") {
-    darkButton.hidden = true;
-}
+
+applyTheme(currentTheme);
+
 darkButton.onclick = () => {
-    lightButton.hidden = false;
-    darkButton.hidden = true;
-    body.classList.replace("light", "dark");
-    localStorage.setItem("theme", "dark");
-}
+    applyTheme("dark");
+    localStorage.setItem("theme", "dark"); 
+};
 
 lightButton.onclick = () => {
-    lightButton.hidden = true;
-    darkButton.hidden = false;
-    body.classList.replace("dark", "light");
-    localStorage.setItem("theme", "light");
-}
-
-// const language = localStorage.getItem("language");
-// if (language) {
-//     body.classList.add(language);
-// }
-// en_lang.onclick = () => {
-//     // body.classList.replace("uk", "en");
-//     body.classList.remove("uk");
-//     body.classList.add("en");
-//     localStorage.setItem("language", "en");
-// }
-
-// uk_lang.onclick = () => {
-//     // body.classList.replace("en", "uk");
-//     body.classList.remove("en");
-//     body.classList.add("uk");
-//     localStorage.setItem("language", "uk");
-// }
-
+    applyTheme("light");
+    localStorage.setItem("theme", "light"); 
+};
 
 $(document).ready(function () {
     $(".burger").click(function (e) {

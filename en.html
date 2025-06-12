@@ -26,10 +26,29 @@
 
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="images/header.jpg" as="image">
+    <link rel="preload" href="images/header.webp" as="image">
     <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="preload" href="js/main.min.js" as="script">
+    <link rel="preload" href="js/libs.min.js" as="script">
+    <link rel="preload" href="js/main.js" as="script">
     <link rel="stylesheet" href="css/style.min.css">
+
+    <style>
+        body.dark .home__theme-dark {
+            display: none !important;
+        }
+
+        body.dark .home__theme-light {
+            display: block !important;
+        }
+
+        body.light .home__theme-light {
+            display: none !important;
+        }
+
+        body.light .home__theme-dark {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body class="dark">
@@ -54,12 +73,12 @@
             <div class="container">
                 <div class="home__wrapper">
                     <h1 class="home__title">
-                        Maks <br>
-                        Melenevskiy
+                        Max <br>
+                        Melenevsky
                     </h1>
                     <p class="home__info">
-                        Layout designer/Front-end developer <br>
-                        22 years old, Kyiv
+                        Front-end/Wordpress developer <br>
+                        24 years old, Kyiv
                     </p>
                     <div class="home__theme">
                         <button id="light" class="home__theme-light">
@@ -74,7 +93,7 @@
                             class="home__language-item">EN</a>
                     </div>
                 </div>
-                <img class="home__img" src="images/header.jpg" alt="">
+                <img class="home__img" src="images/header.webp" alt="">
             </div>
         </section>
 
@@ -156,11 +175,6 @@
                         </div>
 
                         <div class="skills__box">
-                            <p class="skills__name">LESS</p>
-                            <img class="skills__img less-img" src="images/less.svg" alt="">
-                        </div>
-
-                        <div class="skills__box">
                             <p class="skills__name">JS/Jquery</p>
                             <img class="skills__img js-img" src="images/js.svg" alt="">
                         </div>
@@ -189,11 +203,6 @@
                             <p class="skills__name">GSAP</p>
                             <img class="skills__img anime-img" src="images/gsap.svg" alt="">
                         </div>
-
-                        <div class="skills__box">
-                            <p class="skills__name">C# (WinForms/WPF)</p>
-                            <img class="skills__img csharp-img" src="images/c-sharp.svg" alt="">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -206,11 +215,27 @@
                 </h2>
 
                 <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://koliadacosmetolog.com/" target="_blank">
-                        <img class="portfolio__img" src="images/beautifulstudio.webp" loading="lazy" alt="beautiful studio">
+                    <a class="portfolio__img-link" href="https://m-production.ca/" target="_blank">
+                        <img class="portfolio__img" src="images/m-prod.webp" loading="lazy" alt="m-production">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Made with:</span> <br>
+                        <span class="portfolio__info-item">Wordpress</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Bootstrap4</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://m-production.ca/" target="_blank">Website of the "M-Production" printing house</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://koliadacosmetolog.com/" target="_blank">
+                        <img class="portfolio__img" src="images/beautifulstudio.webp" loading="lazy"
+                            alt="koliada cosmetolog">
+                    </a>
+                    <p class="portfolio__img-info">
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; JS</span>
@@ -218,15 +243,31 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Landing page of a cosmetology salon</a>
+                    <a class="portfolio__name-link" href="https://koliadacosmetolog.com/" target="_blank">Landing page of a cosmetology salon</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://mayrawedding.com/" target="_blank">
+                        <img class="portfolio__img" src="images/mayra.webp" loading="lazy" alt="mayrawedding">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-item">Wordpress (ACF)</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Isotope.js</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://mayrawedding.com/" target="_blank">Website of wedding dresses "Mayra Wedding"</a>
                 </p>
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank">
-                        <img class="portfolio__img" src="images/yarltnphoto.jpg" loading="lazy" alt="yarltnphoto">
+                        <img class="portfolio__img" src="images/yarltnphoto.webp" loading="lazy" alt="yarltnphoto">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Made with:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; Jquery</span>
@@ -236,16 +277,31 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Photographer
-                        landing page</a>
+                    <a class="portfolio__name-link" href="https://yarltnphoto.github.io" target="_blank">Photographer's landing page</a>
+                </p>
+
+                <div class="portfolio__img-box">
+                    <a class="portfolio__img-link" href="https://annakyrytsia-photography.com/" target="_blank">
+                        <img class="portfolio__img" src="images/anna.webp" loading="lazy" alt="annakyrytsia-photography">
+                    </a>
+                    <p class="portfolio__img-info">
+                        <span class="portfolio__info-item">Wordpress</span>
+                        <span class="portfolio__info-item">&mdash; HTML5</span>
+                        <span class="portfolio__info-item">&mdash; SCSS</span>
+                        <span class="portfolio__info-item">&mdash; JS</span>
+                        <span class="portfolio__info-item">&mdash; Fancybox.js</span>
+                        <span class="portfolio__info-item">&mdash; Isotope.js</span>
+                    </p>
+                </div>
+                <p class="portfolio__name">
+                    <a class="portfolio__name-link" href="https://annakyrytsia-photography.com/" target="_blank">Photographer's website</a>
                 </p>
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://norway-final.vercel.app/" target="_blank">
-                        <img class="portfolio__img" src="images/Norway.jpg" loading="lazy" alt="norway">
+                        <img class="portfolio__img" src="images/Norway.webp" loading="lazy" alt="Norway">
                     </a>
                     <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Made with:</span> <br>
                         <span class="portfolio__info-item">HTML5</span>
                         <span class="portfolio__info-item">&mdash; SCSS</span>
                         <span class="portfolio__info-item">&mdash; Jquery</span>
@@ -255,41 +311,7 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Landing page of travel agency "Norway"</a>
-                </p>
-
-                <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Trafico/" target="_blank">
-                        <img class="portfolio__img" src="images/trafico.jpg" loading="lazy" alt="trafico"></a>
-                    <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Made with:</span> <br>
-                        <span class="portfolio__info-item">HTML5</span>
-                        <span class="portfolio__info-item">&mdash; SCSS</span>
-                        <span class="portfolio__info-item">&mdash; JS/Jquery</span>
-                        <span class="portfolio__info-item">&mdash; Bootstrap4</span>
-                        <!-- <span class="portfolio__info-item">&mdash; Swiper.js</span> -->
-                    </p>
-                </div>
-                <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Trafico/" target="_blank">Landing
-                        of&nbsp;the transport company &laquo;Trafico&raquo;</a>
-                </p>
-
-                <div class="portfolio__img-box">
-                    <a class="portfolio__img-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">
-                        <img
-                            class="portfolio__img" src="images/makxoot.jpg" loading="lazy" alt="makxoot"></a>
-                    <p class="portfolio__img-info">
-                        <span class="portfolio__info-title">Made with:</span> <br>
-                        <span class="portfolio__info-item">HTML5</span>
-                        <span class="portfolio__info-item">&mdash; SCSS</span>
-                        <span class="portfolio__info-item">&mdash; Jquery</span>
-                        <span class="portfolio__info-item">&mdash; Slick-carousel</span>
-                    </p>
-                </div>
-                <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://maxonn10.github.io/Makxoot/" target="_blank">Landing
-                        of&nbsp;the Internet provider &laquo;Makxoot&raquo;</a>
+                    <a class="portfolio__name-link" href="https://norway-final.vercel.app/" target="_blank">Landing page of the travel agency "Norway"</a>
                 </p>
             </div>
 
@@ -327,6 +349,7 @@
     </main>
 
     <script defer src="js/main.min.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>
