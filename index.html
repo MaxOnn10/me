@@ -48,6 +48,14 @@
         body.light .home__theme-dark {
             display: block !important;
         }
+
+        @media (max-width: 1240px) {
+            .portfolio__img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -81,11 +89,11 @@
                         24 роки, Київ
                     </p>
                     <div class="home__theme">
-                        <button id="light" class="home__theme-light">
-                            <img src="images/light-theme.svg" alt="">
+                        <button id="light" class="home__theme-light" aria-label="Activate light mode">
+                            <img src="images/light-theme.svg" width="32" height="32" alt="light mode">
                         </button>
-                        <button id="dark" class="home__theme-dark">
-                            <img src="images/dark-theme.svg" alt="">
+                        <button id="dark" class="home__theme-dark" aria-label="Activate dark mode">
+                            <img src="images/dark-theme.svg" width="32" height="32" alt="dark mode">
                         </button>
                     </div>
                     <div class="home__language">
@@ -93,7 +101,7 @@
                             href="en.html">EN</a>
                     </div>
                 </div>
-                <img class="home__img" src="images/header.webp" alt="">
+                <img class="home__img" src="images/header.webp" width="1140" height="387" fetchpriority="high" alt="">
             </div>
         </section>
 
@@ -166,7 +174,7 @@
                         </h3>
                         <div class="skills__box">
                             <p class="skills__name">HTML5/CSS3</p>
-                            <img class="skills__img html-img" src="images/CSS3-HTML5.png" alt="">
+                            <img class="skills__img html-img" src="images/CSS3-HTML5.webp" alt="">
                         </div>
 
                         <div class="skills__box">
@@ -191,12 +199,12 @@
 
                         <div class="skills__box">
                             <p class="skills__name">Animate.css</p>
-                            <img class="skills__img animate-img" src="images/animate-css.png" alt="">
+                            <img class="skills__img animate-img" src="images/animate-css.webp" alt="">
                         </div>
 
                         <div class="skills__box">
                             <p class="skills__name">WOW.js</p>
-                            <img class="skills__img wow-img" src="images/wow.jpg" alt="">
+                            <img class="skills__img wow-img" src="images/wow.webp" alt="">
                         </div>
 
                         <div class="skills__box">
@@ -216,7 +224,8 @@
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://m-production.ca/" target="_blank">
-                        <img class="portfolio__img" src="images/m-prod.webp" loading="lazy" alt="m-production">
+                        <img class="portfolio__img" src="images/m-prod.webp" width="1140" height="570" loading="lazy"
+                            alt="m-production">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-item">Wordpress</span>
@@ -227,13 +236,14 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://m-production.ca/" target="_blank">Сайт типографії "M-Production"</a>
+                    <a class="portfolio__name-link" href="https://m-production.ca/" target="_blank">Сайт типографії
+                        "M-Production"</a>
                 </p>
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://koliadacosmetolog.com/" target="_blank">
-                        <img class="portfolio__img" src="images/beautifulstudio.webp" loading="lazy"
-                            alt="koliada cosmetolog">
+                        <img class="portfolio__img" src="images/beautifulstudio.webp" width="1140" height="577"
+                            loading="lazy" alt="koliada cosmetolog">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-item">HTML5</span>
@@ -249,7 +259,8 @@
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://mayrawedding.com/" target="_blank">
-                        <img class="portfolio__img" src="images/mayra.webp" loading="lazy" alt="mayrawedding">
+                        <img class="portfolio__img" src="images/mayra.webp" width="1140" height="569" loading="lazy"
+                            alt="mayrawedding">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-item">Wordpress (ACF)</span>
@@ -261,12 +272,14 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://mayrawedding.com/" target="_blank">Сайт весільних суконь "Mayra Wedding"</a>
+                    <a class="portfolio__name-link" href="https://mayrawedding.com/" target="_blank">Сайт весільних
+                        суконь "Mayra Wedding"</a>
                 </p>
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://yarltnphoto.github.io" target="_blank">
-                        <img class="portfolio__img" src="images/yarltnphoto.webp" loading="lazy" alt="yarltnphoto">
+                        <img class="portfolio__img" src="images/yarltnphoto.webp" width="1140" height="577"
+                            loading="lazy" alt="yarltnphoto">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-item">HTML5</span>
@@ -284,7 +297,8 @@
 
                 <div class="portfolio__img-box">
                     <a class="portfolio__img-link" href="https://annakyrytsia-photography.com/" target="_blank">
-                        <img class="portfolio__img" src="images/anna.webp" loading="lazy" alt="annakyrytsia-photography">
+                        <img class="portfolio__img" src="images/anna.webp" width="1140" height="570" loading="lazy"
+                            alt="annakyrytsia-photography">
                     </a>
                     <p class="portfolio__img-info">
                         <span class="portfolio__info-item">Wordpress</span>
@@ -296,7 +310,8 @@
                     </p>
                 </div>
                 <p class="portfolio__name">
-                    <a class="portfolio__name-link" href="https://annakyrytsia-photography.com/" target="_blank">Сайт фотографа</a>
+                    <a class="portfolio__name-link" href="https://annakyrytsia-photography.com/" target="_blank">Сайт
+                        фотографа</a>
                 </p>
 
                 <div class="portfolio__img-box">
@@ -328,17 +343,17 @@
                 <ul class="contacts__icons">
                     <li class="contacts__icon icon-telegram">
                         <a href="https://t.me/MAKS_Sky" target="_blank">
-                            <img src="images/telegram.svg" alt="telegram">
+                            <img src="images/telegram.svg" width="40" height="40" alt="telegram">
                         </a>
                     </li>
                     <li class="contacts__icon icon-github">
                         <a href="https://github.com/MaxOnn10" target="_blank">
-                            <img src="images/github.svg" alt="github">
+                            <img src="images/github.svg" width="40" height="40" alt="github">
                         </a>
                     </li>
                     <li class="contacts__icon icon-discord">
                         <a href="https://discord.gg/ufUrPK4VFS" target="_blank">
-                            <img src="images/discord.svg" alt="discord">
+                            <img src="images/discord.svg" width="40" height="40" alt="discord">
                         </a>
                     </li>
                 </ul>
